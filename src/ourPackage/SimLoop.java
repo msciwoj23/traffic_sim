@@ -12,7 +12,15 @@ public class SimLoop extends AnimationTimer {
              ) {
 
             if (entity.getType().equals("movable")) {
-                entity.move(entity.getDir());
+
+                int unitsToWait = entity.getUntitsToWait();
+                if (unitsToWait > 0) {
+                    System.out.println(unitsToWait);
+                    entity.setUntitsToWait(unitsToWait - 1);
+                } else {
+                    System.out.println(unitsToWait);
+                    entity.move(entity.getDir());
+                }
             }
         }
     }

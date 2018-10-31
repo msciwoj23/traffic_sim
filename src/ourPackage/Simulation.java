@@ -7,7 +7,7 @@ public class Simulation extends Pane {
 
     public Simulation() {
 
-       new Entity(this, 400,400, "movable");
+       new Entity(this, 400,300, "movable");
        new Entity(this, 400,200, "immovable");
     }
 
