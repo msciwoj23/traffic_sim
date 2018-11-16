@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class Main extends Application {
+public class Main extends Application  {
 
 
 
@@ -18,6 +18,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         SimEngine Sim= new SimEngine();
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+        primaryStage.setTitle("ImageView Experiment 1");
         Sim.start(primaryStage);
     }
 

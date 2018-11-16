@@ -6,7 +6,7 @@ import javafx.scene.layout.Pane;
 
 class VehiclesFactory {
     public void GenerateCar(int x,int y, Direction direction){
-        Car car =new Car(Direction.W);
+//        Car car =new Car(Direction.W);
 
 
 
