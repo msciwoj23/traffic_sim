@@ -1,6 +1,7 @@
 package ourPackage;
 
 import javafx.animation.AnimationTimer;
+import javafx.scene.layout.Pane;
 
 public class SimLoop extends AnimationTimer {
 
@@ -8,17 +9,16 @@ public class SimLoop extends AnimationTimer {
     @Override
     public void handle(long now) {
 
-        for (Entity entity: Globals.gameObjects
+        for (Car entity: Simulation.objectsToMove
              ) {
 
             if (entity.getType().equals("movable")) {
 
                 int unitsToWait = entity.getUntitsToWait();
+
                 if (unitsToWait > 0) {
-                    System.out.println(unitsToWait);
                     entity.setUntitsToWait(unitsToWait - 1);
                 } else {
-                    System.out.println(unitsToWait);
                     entity.move(entity.getDir());
                 }
             }

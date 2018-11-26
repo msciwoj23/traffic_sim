@@ -11,11 +11,11 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
+
         Simulation simulation = new Simulation();
-        // Parent root = FXMLLoader.load(getClass().getResource("ourPackage.fxml"));
         primaryStage.setTitle("CitSimmy");
-        primaryStage.setScene(new Scene(simulation, 600, 600));
+        primaryStage.setScene(new Scene(simulation, 1000, 600));
         primaryStage.show();
         simulation.start();
     }
