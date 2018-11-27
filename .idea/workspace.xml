@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fe79d66-a977-43cb-ac01-fafd3963f848" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Simulation.java" afterDir="false" />
-    </list>
+    <list default="true" id="5fe79d66-a977-43cb-ac01-fafd3963f848" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,12 +41,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="4768" />
+          <entry key="java" value="4814" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4768" />
+          <entry key="JAVA" value="4814" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -86,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
+            <state relative-caret-position="1073">
               <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -107,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
+            <state relative-caret-position="180">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -116,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            <state relative-caret-position="261">
+              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,10 +143,10 @@
         <option value="$PROJECT_DIR$/src/ourPackage/Crossroads.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Globals.java" />
-        <option value="$PROJECT_DIR$/src/ourPackage/SimLoop.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Simulation.java" />
-        <option value="$PROJECT_DIR$/src/ourPackage/Light.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Car.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/Light.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/SimLoop.java" />
       </list>
     </option>
   </component>
@@ -280,12 +272,12 @@
       <workItem from="1542621245841" duration="1148000" />
       <workItem from="1542808124086" duration="1273000" />
       <workItem from="1543222498128" duration="9699000" />
-      <workItem from="1543245216945" duration="6289000" />
+      <workItem from="1543245216945" duration="6752000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55674000" />
+    <option name="totallyTimeSpent" value="56137000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="63" y="-4" width="1303" height="772" extended-state="6" />
@@ -375,16 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -395,19 +377,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
+        <state relative-caret-position="1073">
           <caret line="88" column="34" selection-start-line="88" selection-start-column="34" selection-end-line="88" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -417,6 +389,26 @@
             <element signature="e#2749#2750#0" expanded="true" />
             <element signature="e#2802#2803#0" expanded="true" />
             <element signature="e#2850#2851#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
