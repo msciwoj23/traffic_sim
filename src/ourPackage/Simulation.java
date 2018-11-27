@@ -34,6 +34,8 @@ public class Simulation extends Pane {
 
         Light light = new Light(this, 670, 315);
 
+        Light lightToCompare = new Light(this, 300, 300);
+
 
         Rectangle roadS = new Rectangle(100,300, Color.GRAY);
         roadS.relocate(600,300);
@@ -62,6 +64,7 @@ public class Simulation extends Pane {
 
         car.toFront();
         light.toFront();
+        lightToCompare.toFront();
 
     }
 

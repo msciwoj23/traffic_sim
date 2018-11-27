@@ -10,14 +10,18 @@ public class Light extends Circle {
 
     int timer = 0;
 
-    double multiplier = 0.5;
-    double timeForRed = 700*multiplier;
-    double timeForYellowAftRed = 1000*multiplier;
-    double timeForGreen = 1700*multiplier;
-    double timeForYellowAftGreen = 2000*multiplier;
+    private int timeToNextGreen;
+
+    // double multiplier = 0.5;
+
+    private int timeForGreen = 0;
+    private int timeForYellowAftGreen = 700;
+    private int timeForRed = 1000;
+    private int timeForYellowAftRed = 1700;
+
 
     Light (Pane pane, int xc, int yc) {
-        super(xc,yc,15, Color.RED);
+        super(xc,yc,15, Color.GREEN);
 
         this.pane = pane;
 
@@ -27,20 +31,23 @@ public class Light extends Circle {
     }
 
     public void senseTimePassingAndChange () {
-        timer++;
-        System.out.println(timer);
 
-        if (timer < timeForRed ) {
+        if (timer == timeForYellowAftGreen) {
+            this.setFill(Color.YELLOW);
+        } else if (timer == timeForRed) {
             this.setFill(Color.RED);
-        } else if (timer < timeForYellowAftRed) {
+        } else if (timer == timeForYellowAftRed) {
             this.setFill(Color.YELLOW);
-        } else if (timer < timeForGreen) {
-            this.setFill(Color.GREEN);
-        } else if (timer < timeForYellowAftGreen) {
-            this.setFill(Color.YELLOW);
-        } else if (timer == timeForYellowAftGreen){
+        } else if (timer == 2001){
             timer = 0;
+            this.setFill(Color.GREEN);
         }
 
+        timer++;
+        timeToNextGreen = 2001 - timer;
+    }
+
+    int getTimeToNextGreen() {
+        return timeToNextGreen;
     }
 }

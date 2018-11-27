@@ -11,18 +11,11 @@ public class SimLoop extends AnimationTimer {
 
         for (Car entity: Simulation.cars
              ) {
+                entity.continueAppropriateMovementAndDetection();
 
-            int unitsToWait = entity.getUntitsToWait();
-
-            if (unitsToWait > 0) {
-                entity.setUntitsToWait(unitsToWait - 1);
-
-            } else {
-                if (0 > entity.getLayoutBounds().getMaxY()) {
-                    entity.pane.getChildren().remove(entity);
-                    Simulation.cars.remove(entity);
-                }
-                entity.move(entity.getDir());
+            if (0 > entity.getLayoutBounds().getMaxY()) {
+                entity.pane.getChildren().removeAll(entity.getCollisionDetector(), entity);
+                Simulation.cars.remove(entity);
             }
         }
 

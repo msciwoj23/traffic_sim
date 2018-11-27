@@ -21,7 +21,15 @@ public class Car extends Rectangle {
 
     private String whereToAtNextCrossroads = "straight";
 
-    private String whatToDo = "go";
+    // private String whatToDo = "go";
+
+
+    public enum WhereTo {
+        THROUGH_CROSSROADS, LEFT, RIGHT, TO_NEXT_LIGHTS
+    }
+
+    private WhereTo whereTo = WhereTo.TO_NEXT_LIGHTS;
+
 
     private float speed = 0.2f;
     private int dir = 0;
@@ -48,51 +56,153 @@ public class Car extends Rectangle {
         Simulation.cars.add(this);
     }
 
-    private void checkIfIntersectsAndWaitIfYes( Car car ) {
+    private void preventCollisionWith( Car car ) {
         if (car != this) {
             if (collisionDetector.intersects(car.getBoundsInLocal())) {
-                whatToDo = "wait";
+                System.out.println("prevented collision with car");
+                untitsToWait = 60;
             }
         }
     }
 
-    private void moveCarAndCollisionField() {
+    private void moveCar() {
         setRotate(dir);
         Point2D heading = Utils.directionToVector(dir, speed);
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
-        this.collisionDetector.relocate(getX() - 5, getY() - 40);
+
+        Point2D collisionHeading = Utils.directionToVector(dir, speed + 40);
+        collisionDetector.relocate(getX() + collisionHeading.getX(), getY() + collisionHeading.getY());
+
+        System.out.println("moving car and collision detector");
     }
 
-
-    public void move(double dir) {
-
-        if (this.whereToAtNextCrossroads.equals("right")) {
-
-            if (dir == 90) {
-                this.whereToAtNextCrossroads = "straight";
-            } else if (this.unitsToGoStraight > 0) {
-                this.unitsToGoStraight--;
-            } else {
-                this.dir = (int) dir + 1;
+    private boolean isAtLights() {
+        for (Light light : Simulation.stopLights) {
+            if (collisionDetector.getBoundsInParent().intersects(light.getBoundsInParent())) {
+                System.out.println("intersecting light");
+                untitsToWait = light.getTimeToNextGreen();
+                System.out.println(untitsToWait);
+                return true;
             }
         }
+        return false;
+    }
+
+    private void choosePath() {
+        // here should check if there are places free
+
+        // or randomly choose path
+//        whereTo = WhereTo.THROUGH_CROSSROADS;
+//        System.out.println("changed to THROUGH CROSSROADS");
+//        unitsToGoStraight = 720;
+
+//        whereTo = WhereTo.RIGHT;
+//        System.out.println("changed to RIGHT");
+//        unitsToGoStraight = 520;
+
+        whereTo = WhereTo.LEFT;
+        System.out.println("changed to LEFT");
+        unitsToGoStraight = 800;
+
+    }
+
+    private void moveTowardsNextLightsAndDetectCars() {
+        moveCar();
+        for (Car car : Simulation.cars) {
+
+            preventCollisionWith(car);
+        }
+        if (isAtLights()) {
+            choosePath();
+        }
+    }
+
+    private void goThrough() {
+        if (unitsToGoStraight == 0) {
+            whereTo = WhereTo.TO_NEXT_LIGHTS;
+            System.out.println("changed to TO NEXT LIGHTS");
+        } else {
+            System.out.println("going through");
+            moveCar();
+            unitsToGoStraight--;
+        }
+    }
+
+    private void turnRight() {
+        if (unitsToGoStraight > 0) {
+            moveCar();
+            unitsToGoStraight--;
+
+        } else if (dir == 90) {
+            whereTo = WhereTo.TO_NEXT_LIGHTS;
+            System.out.println("changed to TO NEXT LIGHTS");
+        } else {
+            System.out.println("moving right");
+            moveCar();
+            dir++;
+        }
+    }
+
+    private void turnLeft() {
+        if (unitsToGoStraight > 0) {
+            moveCar();
+            unitsToGoStraight--;
+
+        } else if (dir == 270) {
+            whereTo = WhereTo.TO_NEXT_LIGHTS;
+            System.out.println("changed to TO NEXT LIGHTS");
+        } else {
+            System.out.println("moving left");
+            moveCar();
+            dir--;
+            if (dir == -1) {
+                dir = 359;
+            }
+        }
+    }
+
+    void continueAppropriateMovementAndDetection() {
+
+        if (untitsToWait > 0) {
+            untitsToWait--;
+
+        } else {
+            switch (whereTo) {
+
+                case TO_NEXT_LIGHTS:
+                    moveTowardsNextLightsAndDetectCars();
+                    break;
+
+                case RIGHT:
+                    turnRight();
+                    break;
+
+                case THROUGH_CROSSROADS:
+                    goThrough();
+                    break;
+
+                case LEFT:
+                    turnLeft();
+                    break;
+            }
+
+
+        }
+
+//        if (this.whereToAtNextCrossroads.equals("right")) {
+//
+//            if (dir == 90) {
+//                this.whereToAtNextCrossroads = "straight";
+//            } else if (this.unitsToGoStraight > 0) {
+//                this.unitsToGoStraight--;
+//            } else {
+//                this.dir = (int) dir + 1;
+//            }
+//        }
 
         // Point2D collisionPoint = Utils.directionToVector(dir, 20);
-        whatToDo = "go";
-        for (Car car : Simulation.cars) {
-            checkIfIntersectsAndWaitIfYes(car);
-        }
 
-        for (Light light : Simulation.stopLights) {
-            if (collisionDetector.getBoundsInParent().intersects(light.getBoundsInParent()) && light.getFill() != Color.GREEN) {
-                whatToDo = "wait";
-            }
-        }
-
-        if (whatToDo.equals("go")) {
-            moveCarAndCollisionField();
-        }
     }
 
 
@@ -100,13 +210,15 @@ public class Car extends Rectangle {
         return dir;
     }
 
-    public String getWhatToDo() { return whatToDo; }
-
     public int getUntitsToWait() {
         return untitsToWait;
     }
 
     public void setUntitsToWait(int untitsToWait) {
         this.untitsToWait = untitsToWait;
+    }
+
+    public Circle getCollisionDetector() {
+        return collisionDetector;
     }
 }
