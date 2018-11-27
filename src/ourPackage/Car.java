@@ -15,40 +15,57 @@ public class Car extends Rectangle {
 
     protected Pane pane;
 
-    private Circle oldCollisionCircle;
-
     private int untitsToWait = 0;
 
     private int unitsToGoStraight = 0;
 
     private String whereToAtNextCrossroads = "straight";
 
-    private String type;
-    private float speed = 0.2f;
+    private String whatToDo = "go";
+
+    private float speed = 0.6f;
     private int dir = 0;
 
+    private Circle collisionDetector;
 
-    public Car(Pane pane, int xc, int yc, String type) {
+
+    Car(Pane pane, int xc, int yc) {
 
         super(xc,yc, Color.GREEN);
 
-        this.type = type;
         this.pane = pane;
 
-//        Point2D collisionPoint = Utils.directionToVector(dir, 20);
-//        this.collisionCircle = new Circle(
-//                getX() + collisionPoint.getX(),
-//                getY() + collisionPoint.getY(),
-//                20,
-//                Color.YELLOW);
+        Circle collisionCircle = new Circle(
+                getX() + 15,
+                getY() - 20,
+                20,
+                Color.LIGHTYELLOW);
 
+        this.collisionDetector = collisionCircle;
 
-        pane.getChildren().addAll(this);
-        Simulation.objectsToMove.add(this);
+        pane.getChildren().addAll(this, collisionCircle);
+        collisionCircle.toFront();
+        Simulation.cars.add(this);
     }
 
-    public void move(double dir) {
+    private void checkIfIntersectsAndWaitIfYes( Car car ) {
+        if (car != this) {
+            if (collisionDetector.intersects(car.getBoundsInLocal())) {
+                whatToDo = "wait";
+            }
+        }
+    }
 
+    private void moveCarAndCollisionField() {
+        setRotate(dir);
+        Point2D heading = Utils.directionToVector(dir, speed);
+        setX(getX() + heading.getX());
+        setY(getY() + heading.getY());
+        this.collisionDetector.relocate(getX() - 5, getY() - 40);
+    }
+
+
+    public void move(double dir) {
 
         if (this.whereToAtNextCrossroads.equals("right")) {
 
@@ -61,43 +78,21 @@ public class Car extends Rectangle {
             }
         }
 
+        // Point2D collisionPoint = Utils.directionToVector(dir, 20);
+        whatToDo = "go";
+        for (Car car : Simulation.cars) {
+            checkIfIntersectsAndWaitIfYes(car);
+        }
 
-        BoundingBox collisionCourse = new BoundingBox(this.getBoundsInLocal().getMinX(),
-                this.getBoundsInLocal().getMinY() - 20,
-                this.getBoundsInLocal().getWidth(),
-        this.getBoundsInLocal().getHeight());
+        for (Light light : Simulation.stopLights) {
+            if (collisionDetector.getBoundsInParent().intersects(light.getBoundsInParent()) && light.getFill() != Color.GREEN) {
+                whatToDo = "wait";
+            }
+        }
 
-
-
-        setRotate(dir);
-        Point2D heading = Utils.directionToVector(dir, speed);
-        setX(getX() + heading.getX());
-        setY(getY() + heading.getY());
-
-        Point2D collisionPoint = Utils.directionToVector(dir, 20);
-        Circle collisionCircle = new Circle(
-                getX() + collisionPoint.getX(),
-                getY() + collisionPoint.getY(),
-                20,
-                Color.YELLOW);
-        
-        pane.getChildren().remove(this.oldCollisionCircle);
-        pane.getChildren().add(collisionCircle);
-        this.oldCollisionCircle = collisionCircle;
-
-//        for (Entity entity : Globals.objectsToMove) {
-//
-//            if (entity != this) {
-//                if (collisionCourse.intersects(entity.getBoundsInLocal())) {
-//
-//                    this.untitsToWait = 120;
-//                    Globals.objectsToMove.remove(entity);
-//                    pane.getChildren().remove(entity);
-//                    this.turningRight = true;
-//                    this.unitsToGoStraight = 200;
-//                }
-//            }
-//        }
+        if (whatToDo.equals("go")) {
+            moveCarAndCollisionField();
+        }
     }
 
 
@@ -105,9 +100,7 @@ public class Car extends Rectangle {
         return dir;
     }
 
-    public String getType() {
-        return type;
-    }
+    public String getWhatToDo() { return whatToDo; }
 
     public int getUntitsToWait() {
         return untitsToWait;
