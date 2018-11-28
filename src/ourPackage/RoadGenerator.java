@@ -40,17 +40,39 @@ public class RoadGenerator {
 
         if (vertical){
 
-            for (int i=Math.round(start/size);i<Math.round(stop/size);i++){
+            for (int i=Math.round(start/size);i<Math.round(stop/size)+1;i++){
+
 
 
                 NormalRoad road= new NormalRoad(secondParameter,i*size, size);
                 allRoads.add(road);
+                System.out.println();
+                if (i*size==0){
+
+                    CarGeneratorField carGenerator = new CarGeneratorField(secondParameter,-100,Direction.S,pane);
+                    Simulation.allCarGenerators.add(carGenerator);
+                }
+                if (i*size==Main.getBoardheight()){
+                    CarGeneratorField carGenerator = new CarGeneratorField(secondParameter, Main.getBoardheight(),Direction.N,pane);
+                    Simulation.allCarGenerators.add(carGenerator);
+                    System.out.println("tu jestem");
+                }
+
+
             }
 
         }else{
-            for (int i=Math.round(start/size);i<Math.round(stop/size);i++){
+            for (int i=Math.round(start/size);i<Math.round(stop/size)+1;i++){
                 NormalRoad road= new NormalRoad(i*size, secondParameter, size);
                 allRoads.add(road);
+                if (Math.round(i*size)==0){
+                    CarGeneratorField carGenerator = new CarGeneratorField(-100,secondParameter,Direction.E,pane);
+                    Simulation.allCarGenerators.add(carGenerator);
+                }
+                if (i*size==Main.getBoardwidth()){
+                    CarGeneratorField carGenerator = new CarGeneratorField(Main.getBoardwidth(), secondParameter,Direction.W,pane);
+                    Simulation.allCarGenerators.add(carGenerator);
+                }
             }
 
         }

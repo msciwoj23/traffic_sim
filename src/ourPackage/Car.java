@@ -24,6 +24,11 @@ public class Car extends Rectangle {
     private String whatToDo = "go";
 
     private float speed = 0.6f;
+
+    public void setDir(int dir) {
+        this.dir = dir;
+    }
+
     private int dir = 0;
 
     private Circle collisionDetector;
