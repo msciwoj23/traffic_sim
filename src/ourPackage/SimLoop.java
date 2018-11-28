@@ -1,26 +1,44 @@
 package ourPackage;
 
 import javafx.animation.AnimationTimer;
-import javafx.scene.layout.Pane;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class SimLoop extends AnimationTimer {
+
+    private List<Car> toRemoveList = new LinkedList<>();
 
     // This gets called every 1/60 seconds
     @Override
     public void handle(long now) {
 
-        for (Car entity: Simulation.cars
-             ) {
-                entity.continueAppropriateMovement();
+        final int UP_AND_LEFTMOST_PIXEL = 0;
+        final int LOWEST_PIXEL = 600;
+        final int RIGHTMOST_PIXEL = 1000;
 
-            if (0 > entity.getLayoutBounds().getMaxY()) {
-                entity.pane.getChildren().removeAll(entity.getCollisionDetector(), entity);
-                Simulation.cars.remove(entity);
+        for (Car car: Simulation.cars
+             ) {
+            car.continueAppropriateMovement();
+
+            if (car.getLayoutBounds().getMaxY() < UP_AND_LEFTMOST_PIXEL) {
+                toRemoveList.add(car);
+            } else if (car.getLayoutBounds().getMinY() > LOWEST_PIXEL){
+                toRemoveList.add(car);
+            } else if (car.getLayoutBounds().getMaxX() < UP_AND_LEFTMOST_PIXEL) {
+                toRemoveList.add(car);
+            } else if (car.getLayoutBounds().getMinX() > RIGHTMOST_PIXEL){
+                toRemoveList.add(car);
             }
         }
 
         for (Light light: Simulation.lights) {
             light.senseTimePassingAndChange();
+        }
+
+        for (Car car: toRemoveList) {
+            car.pane.getChildren().removeAll(car.getCollisionDetector(), car);
+            Simulation.cars.remove(car);
         }
     }
 }
