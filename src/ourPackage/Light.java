@@ -8,11 +8,9 @@ public class Light extends Circle {
 
     protected Pane pane;
 
-    int timer = 0;
+    int timer;
 
     private int timeToNextGreen;
-
-    // double multiplier = 0.5;
 
     private int timeForGreen = 0;
     private int timeForYellowAftGreen = 700;
@@ -20,9 +18,10 @@ public class Light extends Circle {
     private int timeForYellowAftRed = 1700;
 
 
-    Light (Pane pane, int xc, int yc) {
-        super(xc,yc,15, Color.GREEN);
+    Light (Pane pane, int xc, int yc, int timer) {
+        super(xc,yc,12, Color.GREEN);
 
+        this.timer = timer;
         this.pane = pane;
 
         Simulation.lights.add(this);
@@ -44,7 +43,11 @@ public class Light extends Circle {
         }
 
         timer++;
-        timeToNextGreen = 2001 - timer;
+        if (this.getFill() == Color.GREEN) {
+            timeToNextGreen = 1;
+        } else {
+            timeToNextGreen = 2001 - timer;
+        }
     }
 
     int getTimeToNextGreen() {

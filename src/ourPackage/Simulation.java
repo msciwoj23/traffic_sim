@@ -24,17 +24,21 @@ public class Simulation extends Pane {
 
     public Simulation() {
 
-        Car car = new Car(this, 30,44);
+        Car car = new Car(this, 30,44, 0);
         car.setX(665);
         car.setY(553);
+
+        Car car2 = new Car(this, 30,44, 90);
+        car2.setX(330);
+        car2.setY(250);
 
         Rectangle crossroads = new Rectangle(100,100, Color.DARKGRAY);
         crossroads.setX(600);
         crossroads.setY(200);
 
-        Light light = new Light(this, 670, 315);
+        Light light = new Light(this, 700, 300,0);
 
-        Light lightToCompare = new Light(this, 300, 300);
+        Light lightToCompare = new Light(this, 600, 300, 1000);
 
 
         Rectangle roadS = new Rectangle(100,300, Color.GRAY);
