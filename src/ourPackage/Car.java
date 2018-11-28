@@ -20,12 +20,15 @@ public class Car extends Rectangle {
 
     private WhereTo whereTo = WhereTo.TO_NEXT_LIGHTS;
 
-
     private float speed = 0.9f;
     private float speedToTurn = 0.2f;
     private int currentDirection;
 
     private int directionWanted;
+
+    public void setDir(int dir) {
+        this.currentDirection = dir;
+    }
 
     private Circle collisionDetector;
 
