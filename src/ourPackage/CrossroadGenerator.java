@@ -40,6 +40,6 @@ public class CrossroadGenerator {
 
         }
 
-        System.out.println("wygenerowano");
+//        System.out.println("wygenerowano");
     }
 }

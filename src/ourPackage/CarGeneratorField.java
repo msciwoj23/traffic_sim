@@ -60,22 +60,22 @@ public class CarGeneratorField {
 
                 }
                 if (direction == Direction.E) {
-                    System.out.println("activated");
+//                    System.out.println("activated");
                     Car car = new Car(pane, 30, 44, 90);
                     car.setX(positionX + 15);
                     car.setY(positionY + 53);
-                    System.out.println(car.getX() + " " + car.getY());
+//                    System.out.println(car.getX() + " " + car.getY());
 //                car.setX(100);
 //                car.setY(100);
                     car.toFront();
 
                 }
                 if (direction == Direction.W) {
-                    System.out.println("activated");
+//                    System.out.println("activated");
                     Car car = new Car(pane, 30, 44, 270);
                     car.setX(positionX + 15);
                     car.setY(positionY + 3);
-                    System.out.println(car.getX() + " " + car.getY());
+//                    System.out.println(car.getX() + " " + car.getY());
                     car.toFront();
                 }
 

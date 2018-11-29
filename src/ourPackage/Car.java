@@ -85,9 +85,9 @@ public class Car extends Rectangle {
     private boolean isAtLights() {
         for (Light light : Simulation.stopLights) {
             if (collisionDetector.getBoundsInParent().intersects(light.getBoundsInParent())) {
-                System.out.println("intersecting light");
+//                System.out.println("intersecting light");
                 unitsToWait = light.getTimeToNextGreen();
-                System.out.println(unitsToWait);
+//                System.out.println(unitsToWait);
                 return true;
             }
         }
@@ -96,27 +96,26 @@ public class Car extends Rectangle {
 
     private void choosePath() {
         // here should check if there are places free
-
+        int dice = (int) (Math.random()*3);
         // or randomly choose path
 
-//        whereTo = WhereTo.THROUGH_CROSSROADS;
-//        System.out.println("changed to THROUGH CROSSROADS");
-//        unitsToGoStraight = 720;
-
-//        whereTo = WhereTo.RIGHT;
-//        System.out.println("changed to RIGHT");
-//        unitsToGoStraight = 470;
-//        directionWanted = currentDirection + 90;
-//        if (directionWanted == 470) {
-//            directionWanted = 90;
-//        }
-
-        whereTo = WhereTo.LEFT;
-        System.out.println("changed to LEFT");
-        unitsToGoStraight = 730;
-        directionWanted = currentDirection - 90;
-        if (directionWanted == -90) {
-            directionWanted = 270;
+        if (dice == 0) {
+            whereTo = WhereTo.THROUGH_CROSSROADS;
+            unitsToGoStraight = 400;
+        } else if (dice == 1) {
+            whereTo = WhereTo.RIGHT;
+            unitsToGoStraight = 470;
+            directionWanted = currentDirection + 90;
+            if (directionWanted == 470) {
+                directionWanted = 90;
+            }
+        } else if (dice == 2) {
+            whereTo = WhereTo.LEFT;
+            unitsToGoStraight = 730;
+            directionWanted = currentDirection - 90;
+            if (directionWanted == -90) {
+                directionWanted = 270;
+            }
         }
     }
 
@@ -126,10 +125,6 @@ public class Car extends Rectangle {
         if (unitsToGoStraight > 0) {
             unitsToGoStraight--;
         } else {
-            for (Car car : Simulation.cars) {
-
-                preventCollisionWith(car);
-            }
             if (isAtLights()) {
                 choosePath();
             }
@@ -142,14 +137,14 @@ public class Car extends Rectangle {
             // System.out.println("changed to TO NEXT LIGHTS");
         } else {
             // System.out.println("going through");
-            moveCar(speed, currentDirection);
+            moveCar(0.4f, currentDirection);
             unitsToGoStraight--;
         }
     }
 
     private void turnRight() {
         if (unitsToGoStraight > 0) {
-            moveCar(0.2f, currentDirection);
+            moveCar(speedToTurn, currentDirection);
             unitsToGoStraight--;
 
         } else if (currentDirection == directionWanted) {
@@ -164,7 +159,7 @@ public class Car extends Rectangle {
 
     private void turnLeft() {
         if (unitsToGoStraight > 0) {
-            moveCar(0.2f, currentDirection);
+            moveCar(speedToTurn, currentDirection);
             unitsToGoStraight--;
 
         } else if (currentDirection == directionWanted) {
@@ -187,6 +182,10 @@ public class Car extends Rectangle {
         if (unitsToWait > 0) {
             unitsToWait--;
         } else {
+            for (Car car : Simulation.cars) {
+
+                preventCollisionWith(car);
+            }
             switch (whereTo) {
 
                 case TO_NEXT_LIGHTS:

@@ -55,7 +55,7 @@ public class RoadGenerator {
                 if (i*size==Main.getBoardheight()){
                     CarGeneratorField carGenerator = new CarGeneratorField(secondParameter, Main.getBoardheight(),Direction.N,pane);
                     Simulation.allCarGenerators.add(carGenerator);
-                    System.out.println("tu jestem");
+//                    System.out.println("tu jestem");
                 }
 
 

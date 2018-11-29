@@ -23,18 +23,18 @@ public class SimLoop extends AnimationTimer {
             car.continueAppropriateMovement();
 
             if (car.getLayoutBounds().getMaxY() <= UP_AND_LEFTMOST_PIXEL) {
-                System.out.println("out");
+//                System.out.println("out");
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMinY() >= LOWEST_PIXEL) {
-                System.out.println("out");
+//                System.out.println("out");
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMaxX() <= UP_AND_LEFTMOST_PIXEL) {
-                System.out.println("out");
+//                System.out.println("out");
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMinX() >= RIGHTMOST_PIXEL) {
-                System.out.println("out");
+//                System.out.println("out");
                 toRemoveList.add(car);
-                System.out.println(toRemoveList.size());
+//                System.out.println(toRemoveList.size());
             }
         }
 
@@ -43,7 +43,7 @@ public class SimLoop extends AnimationTimer {
         }
 
         for (Car car : toRemoveList) {
-            System.out.println("removing");
+//            System.out.println("removing");
             car.pane.getChildren().removeAll(car.getCollisionDetector(), car);
             Simulation.cars.remove(car);
         }
@@ -55,7 +55,7 @@ public class SimLoop extends AnimationTimer {
         }
         if (Simulation.cars.size() < 12) {
             int dice = (int) (Math.random()*Simulation.getAllCarGenerators().size());
-            System.out.println(dice);
+//            System.out.println(dice);
             Simulation.getAllCarGenerators().get(dice).tryToGenerateCar();
         }
     }

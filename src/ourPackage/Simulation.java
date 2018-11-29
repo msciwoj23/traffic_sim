@@ -40,11 +40,11 @@ public class Simulation extends Pane {
         road.generate(0,1000,300, true, this,allRoads);
         road.generate(0,300,300, false, this,allRoads);
         road.generate(0,1000,500, true, this,allRoads);
-        System.out.println("to tu");
+//        System.out.println("to tu");
         for (CarGeneratorField generator:allCarGenerators){
-            System.out.println(generator.getPositionX()+" "+generator.getPositionY()+" "+generator.getDirection());
+//            System.out.println(generator.getPositionX()+" "+generator.getPositionY()+" "+generator.getDirection());
         }
-        System.out.println(allCarGenerators.size());
+//        System.out.println(allCarGenerators.size());
         CrossroadGenerator crossroads= new CrossroadGenerator();
         crossroads.checkAndGenerate(allRoads, allCrossroads, this);
         RoadsPrinter printroads=new RoadsPrinter();
