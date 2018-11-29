@@ -18,31 +18,43 @@ public class SimLoop extends AnimationTimer {
         final int LOWEST_PIXEL = Main.getBoardheight() + 100;
         final int RIGHTMOST_PIXEL = Main.getBoardwidth() + 100;
 
-        for (Car car : Simulation.cars
-        ) {
+        for (Car car : Simulation.cars) {
+
             car.continueAppropriateMovement();
 
-            if (car.getLayoutBounds().getMaxY() < UP_AND_LEFTMOST_PIXEL) {
+            if (car.getLayoutBounds().getMaxY() <= UP_AND_LEFTMOST_PIXEL) {
+                System.out.println("out");
                 toRemoveList.add(car);
-            } else if (car.getLayoutBounds().getMinY() > LOWEST_PIXEL) {
+            } else if (car.getLayoutBounds().getMinY() >= LOWEST_PIXEL) {
+                System.out.println("out");
                 toRemoveList.add(car);
-            } else if (car.getLayoutBounds().getMaxX() < UP_AND_LEFTMOST_PIXEL) {
+            } else if (car.getLayoutBounds().getMaxX() <= UP_AND_LEFTMOST_PIXEL) {
+                System.out.println("out");
                 toRemoveList.add(car);
-            } else if (car.getLayoutBounds().getMinX() > RIGHTMOST_PIXEL) {
+            } else if (car.getLayoutBounds().getMinX() >= RIGHTMOST_PIXEL) {
+                System.out.println("out");
                 toRemoveList.add(car);
+                System.out.println(toRemoveList.size());
             }
         }
-
+//    Simulation.cars.removeAll(toRemoveList);
         for (Light light : Simulation.lights) {
             light.senseTimePassingAndChange();
         }
 
+//        System.out.println("HERE");
+
+        if (toRemoveList.size()>0){
+            System.out.println("dupa");
+        }
+
         for (Car car : toRemoveList) {
+            System.out.println("removing");
             car.pane.getChildren().removeAll(car.getCollisionDetector(), car);
             Simulation.cars.remove(car);
-
-
         }
+        toRemoveList.clear();
+
         for (CarGeneratorField carGenerator : Simulation.getAllCarGenerators()) {
             carGenerator.tryToGenerateCar();
         }

@@ -2,31 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fe79d66-a977-43cb-ac01-fafd3963f848" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/Crossroad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/Direction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/NormalRoad.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/RoadGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/Roads.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ourPackage/RoadsPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Simulation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Light.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Light.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Simulation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-354237988">
@@ -36,25 +35,26 @@
           <entry key="project.open.time.0" value="3" />
           <entry key="project.open.time.1" value="3" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="14" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="2" />
-          <entry key="java" value="22" />
+          <entry key="java" value="25" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="22" />
+          <entry key="JAVA" value="25" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="2" />
         </counts>
@@ -62,12 +62,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="7790" />
+          <entry key="java" value="7995" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7790" />
+          <entry key="JAVA" value="7995" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -78,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="75">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -96,12 +96,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="117">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#792#793#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
+                <element signature="e#827#828#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,20 +110,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="165">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#698#699#0" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#6254#6255#0" expanded="true" />
-                <element signature="e#6293#6294#0" expanded="true" />
-                <element signature="e#6328#6329#0" expanded="true" />
-                <element signature="e#6362#6363#0" expanded="true" />
-                <element signature="e#6413#6414#0" expanded="true" />
-                <element signature="e#6459#6460#0" expanded="true" />
-                <element signature="e#6503#6504#0" expanded="true" />
-                <element signature="e#6543#6544#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,12 +131,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
+            <state relative-caret-position="423">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1392#1393#0" expanded="true" />
-                <element signature="e#1430#1431#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,8 +143,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-end-line="36" selection-end-column="34" />
+            <state relative-caret-position="183">
+              <caret line="79" selection-start-line="79" selection-end-line="79" />
             </state>
           </provider>
         </entry>
@@ -165,10 +153,37 @@
         <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+              <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/javafx.graphics/javafx/animation/AnimationTimer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/javafx.graphics/com/sun/scenario/animation/AbstractMasterTimer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="266" selection-start-line="266" selection-end-line="266" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/security/AccessController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="111">
+              <caret line="371" column="31" selection-start-line="371" selection-start-column="31" selection-end-line="371" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -221,7 +236,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,8 +269,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -334,17 +349,18 @@
       <workItem from="1543222498128" duration="9699000" />
       <workItem from="1543245216945" duration="21284000" />
       <workItem from="1543393573077" duration="10488000" />
+      <workItem from="1543479956477" duration="3337000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82358000" />
+    <option name="totallyTimeSpent" value="87777000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="63" y="-4" width="1303" height="772" extended-state="6" />
+    <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24105012" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3150358" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -354,8 +370,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38819876" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39906833" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32919255" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4409938" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -371,7 +387,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3293556" />
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
@@ -413,7 +429,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="75">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -427,6 +443,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="423">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Utils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -434,53 +460,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/java.base/java/security/AccessController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#698#699#0" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#6254#6255#0" expanded="true" />
-            <element signature="e#6293#6294#0" expanded="true" />
-            <element signature="e#6328#6329#0" expanded="true" />
-            <element signature="e#6362#6363#0" expanded="true" />
-            <element signature="e#6413#6414#0" expanded="true" />
-            <element signature="e#6459#6460#0" expanded="true" />
-            <element signature="e#6503#6504#0" expanded="true" />
-            <element signature="e#6543#6544#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="111">
+          <caret line="371" column="31" selection-start-line="371" selection-start-column="31" selection-end-line="371" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/javafx.graphics/com/sun/scenario/animation/AbstractMasterTimer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="266" selection-start-line="266" selection-end-line="266" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-10-oracle/lib/src.zip!/javafx.graphics/javafx/animation/AnimationTimer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="50" selection-end-line="93" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="36" column="34" lean-forward="true" selection-start-line="36" selection-end-line="36" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1392#1393#0" expanded="true" />
-            <element signature="e#1430#1431#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="183">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="117">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#792#793#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -488,7 +513,7 @@
     <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <caret line="53" column="40" lean-forward="true" selection-start-line="53" selection-start-column="40" selection-end-line="53" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

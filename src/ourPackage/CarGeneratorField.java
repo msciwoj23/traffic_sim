@@ -34,7 +34,7 @@ public class CarGeneratorField {
     public void printField(){}
     public void tryToGenerateCar(){
         timer--;
-        System.out.println(timer);
+        // System.out.println(timer);
         if (timer<0){
 
             if (direction==Direction.N){
