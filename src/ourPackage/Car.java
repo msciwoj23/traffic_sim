@@ -20,7 +20,7 @@ public class Car extends Rectangle {
 
     private WhereTo whereTo = WhereTo.TO_NEXT_LIGHTS;
 
-    private float speed = 0.9f;
+    private float speed = 0.6f;
     private float speedToTurn = 0.2f;
     private int currentDirection;
 
@@ -43,7 +43,7 @@ public class Car extends Rectangle {
         Circle collisionCircle = new Circle(
                 getX() + 15,
                 getY() - 20,
-                20,
+                14,
                 Color.LIGHTYELLOW);
 
         this.collisionDetector = collisionCircle;
@@ -56,7 +56,7 @@ public class Car extends Rectangle {
     private void preventCollisionWith( Car car ) {
         if (car != this) {
             if (collisionDetector.getBoundsInParent().intersects(car.getBoundsInParent())) {
-                System.out.println("prevented collision with car");
+                // System.out.println("prevented collision with car");
                 unitsToWait = 60;
             }
         }
@@ -110,7 +110,6 @@ public class Car extends Rectangle {
         if (directionWanted == -90) {
             directionWanted = 270;
         }
-
     }
 
     private void moveTowardsNextLightsAndDetectCars() {
@@ -127,7 +126,6 @@ public class Car extends Rectangle {
                 choosePath();
             }
         }
-
     }
 
     private void goThrough() {
@@ -165,7 +163,7 @@ public class Car extends Rectangle {
 
             whereTo = WhereTo.TO_NEXT_LIGHTS;
             // System.out.println("changed to TO NEXT LIGHTS");
-            unitsToGoStraight = 240;
+            unitsToGoStraight = 100;
         } else {
             //System.out.println("moving left");
             moveCar(speedToTurn, currentDirection);

@@ -37,15 +37,9 @@ public class SimLoop extends AnimationTimer {
                 System.out.println(toRemoveList.size());
             }
         }
-//    Simulation.cars.removeAll(toRemoveList);
+
         for (Light light : Simulation.lights) {
             light.senseTimePassingAndChange();
-        }
-
-//        System.out.println("HERE");
-
-        if (toRemoveList.size()>0){
-            System.out.println("dupa");
         }
 
         for (Car car : toRemoveList) {
@@ -53,10 +47,16 @@ public class SimLoop extends AnimationTimer {
             car.pane.getChildren().removeAll(car.getCollisionDetector(), car);
             Simulation.cars.remove(car);
         }
+
         toRemoveList.clear();
 
         for (CarGeneratorField carGenerator : Simulation.getAllCarGenerators()) {
-            carGenerator.tryToGenerateCar();
+            carGenerator.timer();
+        }
+        if (Simulation.cars.size() < 12) {
+            int dice = (int) (Math.random()*Simulation.getAllCarGenerators().size());
+            System.out.println(dice);
+            Simulation.getAllCarGenerators().get(dice).tryToGenerateCar();
         }
     }
 }

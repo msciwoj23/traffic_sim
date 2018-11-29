@@ -35,21 +35,10 @@ public class Simulation extends Pane {
 
     public Simulation() {
 
-        Light lightSE = new Light(this, 700, 300,0);
-        Light lightSW = new Light(this, 600, 300, 1000);
-        Light lightNW = new Light(this, 600, 200,0);
-        Light lightNE = new Light(this, 700, 200,1000);
-
-        // carS.toFront();
-        lightSE.toFront();
-        lightSW.toFront();
-        lightNW.toFront();
-        lightNE.toFront();
-
         RoadGenerator road=new RoadGenerator();
         road.generate(0,1000,100, false, this,allRoads);
         road.generate(0,1000,300, true, this,allRoads);
-        road.generate(0,400,300, false, this,allRoads);
+        road.generate(0,300,300, false, this,allRoads);
         road.generate(0,1000,500, true, this,allRoads);
         System.out.println("to tu");
         for (CarGeneratorField generator:allCarGenerators){

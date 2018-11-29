@@ -20,6 +20,15 @@ public class CrossroadGenerator {
                         allRoads.remove(j);
                         allRoads.remove(i);
 
+                        Light lightSE = new Light(pane, crossroad.getPositionX() + 90, crossroad.getPositionY() + 110,0);
+                        Light lightSEvisible = new Light(pane, crossroad.getPositionX() + 110, crossroad.getPositionY() + 110,0);
+                        Light lightSW = new Light(pane, crossroad.getPositionX() - 10, crossroad.getPositionY() + 90, 1000);
+                        Light lightSWvisible = new Light(pane, crossroad.getPositionX() - 10, crossroad.getPositionY() + 110,1000);
+                        Light lightNW = new Light(pane, crossroad.getPositionX() - 10, crossroad.getPositionY() - 10,0);
+                        Light lightNWvisible = new Light(pane, crossroad.getPositionX() + 10, crossroad.getPositionY() - 10,0);
+                        Light lightNE = new Light(pane, crossroad.getPositionX() + 110, crossroad.getPositionY() + 10,1000);
+                        Light lightNEvisible = new Light(pane, crossroad.getPositionX() + 110, crossroad.getPositionY() - 10,1000);
+
 
 //                        i--;
 //                        j--;
