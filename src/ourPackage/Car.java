@@ -1,5 +1,6 @@
 package ourPackage;
 
+import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -41,8 +42,8 @@ public class Car extends Rectangle {
         this.pane = pane;
 
         Circle collisionCircle = new Circle(
-                getX() + 15,
-                getY() - 20,
+                getX(),
+                getY(),
                 14,
                 Color.LIGHTYELLOW);
 
@@ -68,9 +69,16 @@ public class Car extends Rectangle {
         setX(getX() + heading.getX());
         setY(getY() + heading.getY());
 
-        Point2D collisionHeading = Utils.directionToVector(dir, speed + 40);
-        collisionDetector.relocate(getX() + collisionHeading.getX(), getY() + collisionHeading.getY());
 
+        Bounds carBounds = this.getBoundsInParent();
+
+        double centreY = (carBounds.getMinY() + carBounds.getMaxY())/2;
+        double centreX = (carBounds.getMinX() + carBounds.getMaxX())/2;
+
+        Point2D collisionHeading = Utils.directionToVector(dir, speed + 40);
+        // collisionDetector.relocate(getX() + collisionHeading.getX(), getY() + collisionHeading.getY());
+        collisionDetector.setCenterX(centreX + collisionHeading.getX());
+        collisionDetector.setCenterY(centreY + collisionHeading.getY());
         // System.out.println("moving car and collision detector");
     }
 

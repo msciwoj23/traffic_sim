@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fe79d66-a977-43cb-ac01-fafd3963f848" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ourPackage/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Simulation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,12 +60,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="8286" />
+          <entry key="java" value="8432" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8286" />
+          <entry key="JAVA" value="8432" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -109,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="29" column="121" selection-start-line="29" selection-start-column="121" selection-end-line="29" selection-end-column="121" />
+            <state relative-caret-position="255">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -151,8 +147,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+            <state relative-caret-position="205">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -160,11 +156,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="295">
+              <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,8 +195,8 @@
         <option value="$PROJECT_DIR$/src/ourPackage/Simulation.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/SimLoop.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" />
-        <option value="$PROJECT_DIR$/src/ourPackage/Car.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/Car.java" />
       </list>
     </option>
   </component>
@@ -339,7 +335,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91211000" />
+    <option name="totallyTimeSpent" value="94372000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
@@ -355,7 +351,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2189441" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22826087" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4409938" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -456,16 +452,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
@@ -480,11 +466,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        <state relative-caret-position="205">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -495,20 +488,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+        <state relative-caret-position="423">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="121" selection-start-line="29" selection-start-column="121" selection-end-line="29" selection-end-column="121" />
+        <state relative-caret-position="295">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
