@@ -1,7 +1,5 @@
 package ourPackage;
 
-import javafx.scene.shape.Rectangle;
-
 public abstract class Roads {
     public int getWidth() {
         return width;

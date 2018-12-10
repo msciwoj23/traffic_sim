@@ -23,64 +23,63 @@ public class CarGeneratorField {
     private Direction direction;
     private Pane pane;
     private double timer;
+    private double shortestTimeToGenerateFirstCarInSeconds=2;
+    private double nextCarMinimumTimeInSeconds=5;
+    private double nextCarTimeWindowInSeconds=3;
+    private final int framesPerSecond=60;
+    private int carLength=44;
+    private int carWidth=30;
+    private int translateRight=65;
+    private int translateLeft=15;
+    private int translateUp=3;
+    private int translateDown=53;
+
 
     public CarGeneratorField(int positionX, int positionY, Direction direction,Pane pane) {
         this.positionX = positionX;
         this.positionY = positionY;
         this.direction = direction;
         this.pane=pane;
-        this.timer=Math.random()+2*60;
+        this.timer=Math.random()+shortestTimeToGenerateFirstCarInSeconds * framesPerSecond;
     }
     public void printField(){}
 
     public void timer(){timer--;}
+    public void carFromN(){
+        Car car = new Car(pane, carWidth, carLength, direction.getDirection());
+        car.setX(positionX + translateRight);
+        car.setY(positionY + translateDown);
+        car.toFront();
+    }
+    public void carFromS(){
+        Car car = new Car(pane, carWidth, carLength, direction.getDirection());
+        car.setX(positionX + translateLeft);
+        car.setY(positionY + translateUp);
+        car.toFront();
+    }
+    public void carFromE(){
+        Car car = new Car(pane, carWidth, carLength, direction.getDirection());
+        car.setX(positionX + translateLeft);
+        car.setY(positionY + translateDown);
+        car.toFront();
+    }
+    public void carFromW(){
+        Car car = new Car(pane, carWidth, carLength, direction.getDirection());
+        car.setX(positionX + translateRight);
+        car.setY(positionY + translateUp);
+        car.toFront();
+    }
 
     public void tryToGenerateCar(){
 
-        // System.out.println(timer);
+
          if (timer<0){
+             if (direction == Direction.N) {carFromN();}
+             if (direction == Direction.S) {carFromS();}
+             if (direction == Direction.E) {carFromE();}
+             if (direction == Direction.W) {carFromW();}
 
-
-
-                if (direction == Direction.N) {
-                    Car car = new Car(pane, 30, 44, 0);
-                    car.setX(positionX + 65);
-                    car.setY(positionY + 53);
-                    car.toFront();
-                }
-                if (direction == Direction.S) {
-
-
-                    Car car = new Car(pane, 30, 44, 180);
-                    car.setX(positionX + 15);
-                    car.setY(positionY + 53);
-//                car.setX(100);
-//                car.setY(100);
-                    car.toFront();
-
-                }
-                if (direction == Direction.E) {
-//                    System.out.println("activated");
-                    Car car = new Car(pane, 30, 44, 90);
-                    car.setX(positionX + 15);
-                    car.setY(positionY + 53);
-//                    System.out.println(car.getX() + " " + car.getY());
-//                car.setX(100);
-//                car.setY(100);
-                    car.toFront();
-
-                }
-                if (direction == Direction.W) {
-//                    System.out.println("activated");
-                    Car car = new Car(pane, 30, 44, 270);
-                    car.setX(positionX + 15);
-                    car.setY(positionY + 3);
-//                    System.out.println(car.getX() + " " + car.getY());
-                    car.toFront();
-                }
-
-                timer = Math.random()*3*60  + 5 * 60;
-//            System.out.println(timer);
+             timer = Math.random()*nextCarTimeWindowInSeconds * framesPerSecond  + nextCarMinimumTimeInSeconds * framesPerSecond;
             }
      }
 }

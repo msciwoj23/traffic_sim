@@ -21,8 +21,8 @@ public class Car extends Rectangle {
 
     private WhereTo whereTo = WhereTo.TO_NEXT_LIGHTS;
 
-    private float speed = 0.6f;
-    private float speedToTurn = 0.2f;
+    private float speed = 0.7f;
+    private float speedToTurn = 0.7f;
     private int currentDirection;
 
     private int directionWanted;

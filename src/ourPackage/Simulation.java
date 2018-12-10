@@ -49,6 +49,7 @@ public class Simulation extends Pane {
         crossroads.checkAndGenerate(allRoads, allCrossroads, this);
         RoadsPrinter printroads=new RoadsPrinter();
         printroads.printRoads(allRoads,allCrossroads,this);
+        System.out.println(allCrossroads.size());
 
     }
 
