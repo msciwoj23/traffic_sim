@@ -60,7 +60,7 @@ public class CrossroadGenerator {
     private void addLights(List<NormalRoad> allRoads, List<Crossroad> allCrossroads, Pane pane, Crossroad crossroad){
         Light lightSE = new Light(pane, crossroad.getPositionX() + translateVisibleLightsRight + hideMinus, crossroad.getPositionY() + translateVisibleLightsDown,0);
         Light lightSEvisible = new Light(pane, crossroad.getPositionX() + translateVisibleLightsRight, crossroad.getPositionY() + translateVisibleLightsDown,0);
-        Light lightSW = new Light(pane, crossroad.getPositionX() - translateVisibleLightsLeft, crossroad.getPositionY() + translateVisibleLightsDown + hideMinus, 1000);
+        Light lightSW = new Light(pane, crossroad.getPositionX() + translateVisibleLightsLeft, crossroad.getPositionY() + translateVisibleLightsDown + hideMinus, 1000);
         Light lightSWvisible = new Light(pane, crossroad.getPositionX() + translateVisibleLightsLeft, crossroad.getPositionY() + translateVisibleLightsDown,1000);
         Light lightNW = new Light(pane, crossroad.getPositionX() + translateVisibleLightsLeft + hidePlus, crossroad.getPositionY() + translateVisibleLightsUp,0);
         Light lightNWvisible = new Light(pane, crossroad.getPositionX() + translateVisibleLightsLeft, crossroad.getPositionY() + translateVisibleLightsUp,0);
