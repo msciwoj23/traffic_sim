@@ -26,7 +26,6 @@ public class SimLoop extends AnimationTimer {
 
     private void removingCarsFromList() {
         for (Car car : toRemoveList) {
-            System.out.println("removing");
             car.pane.getChildren().removeAll(car.getCollisionDetector(), car);
             Simulation.cars.remove(car);
         }
@@ -53,16 +52,12 @@ public class SimLoop extends AnimationTimer {
         for (Car car : Simulation.cars) {
             car.continueAppropriateMovement();
             if (car.getLayoutBounds().getMaxY() <= UP_AND_LEFTMOST_PIXEL) {
-                System.out.println("out");
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMinY() >= LOWEST_PIXEL) {
-                System.out.println("out");
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMaxX() <= UP_AND_LEFTMOST_PIXEL) {
-                System.out.println("out");
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMinX() >= RIGHTMOST_PIXEL) {
-                System.out.println("out");
                 toRemoveList.add(car);
                 System.out.println(toRemoveList.size());
             }
