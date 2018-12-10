@@ -9,6 +9,8 @@ public class SimLoop extends AnimationTimer {
 
     private List<Car> toRemoveList = new LinkedList<>();
 
+
+
     // This gets called every 1/60 seconds
     @Override
     public void handle(long now) {

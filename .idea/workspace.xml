@@ -4,18 +4,13 @@
     <list default="true" id="5fe79d66-a977-43cb-ac01-fafd3963f848" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car$WhereTo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car$WhereTo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/CarGeneratorField.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/CarGeneratorField.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/CrossroadGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/CrossroadGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/RoadGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/RoadGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/RoadsPrinter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/RoadsPrinter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/SimLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Simulation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/trafic_simulator/ourPackage/Simulation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ourPackage/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/RoadGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/RoadGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ourPackage/RoadsPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/RoadsPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ourPackage/Direction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Direction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ourPackage/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/SimLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ourPackage/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ourPackage/Simulation.java" afterDir="false" />
     </list>
@@ -43,31 +38,32 @@
     <session id="-354237988">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="3" />
-          <entry key="project.open.time.1" value="3" />
-          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.1" value="5" />
+          <entry key="project.open.time.10" value="3" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.6" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="17" />
+          <entry key="project.opened" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="fxml" value="2" />
-          <entry key="java" value="27" />
+          <entry key="java" value="29" />
           <entry key="properties" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="27" />
+          <entry key="JAVA" value="29" />
           <entry key="Properties" value="1" />
           <entry key="XML" value="2" />
         </counts>
@@ -75,12 +71,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="fxml" value="1" />
-          <entry key="java" value="8627" />
+          <entry key="java" value="9763" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8627" />
+          <entry key="JAVA" value="9763" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
@@ -91,16 +87,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
+            <state relative-caret-position="360">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#200#201#0" expanded="true" />
                 <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#269#270#0" expanded="true" />
-                <element signature="e#302#303#0" expanded="true" />
-                <element signature="e#344#345#0" expanded="true" />
-                <element signature="e#378#379#0" expanded="true" />
+                <element signature="e#662#663#0" expanded="true" />
+                <element signature="e#696#697#0" expanded="true" />
+                <element signature="e#732#733#0" expanded="true" />
+                <element signature="e#767#768#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -110,12 +106,23 @@
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="375">
-              <caret line="36" selection-start-line="36" selection-end-line="36" />
+              <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#788#789#0" expanded="true" />
                 <element signature="e#827#828#0" expanded="true" />
+                <element signature="e#1285#1286#0" expanded="true" />
+                <element signature="e#1312#1313#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ourPackage/RoadGenerator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="71" column="46" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -123,8 +130,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="22" column="37" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="37" />
+            <state relative-caret-position="-150">
+              <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -141,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="480">
               <caret line="32" selection-start-line="32" selection-end-line="32" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -153,39 +163,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
+            <state relative-caret-position="502">
               <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
+        <entry file="file://$PROJECT_DIR$/src/ourPackage/Direction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
+        <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1402">
-              <caret line="187" column="13" selection-start-line="187" selection-start-column="13" selection-end-line="187" selection-end-column="13" />
+            <state relative-caret-position="525">
+              <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#6541#6542#0" expanded="true" />
-                <element signature="e#6580#6581#0" expanded="true" />
-                <element signature="e#6615#6616#0" expanded="true" />
-                <element signature="e#6649#6650#0" expanded="true" />
-                <element signature="e#6700#6701#0" expanded="true" />
-                <element signature="e#6746#6747#0" expanded="true" />
-                <element signature="e#6790#6791#0" expanded="true" />
-                <element signature="e#6830#6831#0" expanded="true" />
+                <element signature="e#297#298#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1545">
+              <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#6803#6804#0" expanded="true" />
+                <element signature="e#6843#6844#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -219,13 +234,14 @@
         <option value="$PROJECT_DIR$/src/ourPackage/Entity.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Crossroads.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Globals.java" />
-        <option value="$PROJECT_DIR$/src/ourPackage/Main.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Light.java" />
-        <option value="$PROJECT_DIR$/src/ourPackage/Simulation.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java" />
-        <option value="$PROJECT_DIR$/src/ourPackage/SimLoop.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/Direction.java" />
         <option value="$PROJECT_DIR$/src/ourPackage/Car.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/Main.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/Simulation.java" />
+        <option value="$PROJECT_DIR$/src/ourPackage/SimLoop.java" />
       </list>
     </option>
   </component>
@@ -236,16 +252,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="73" />
-    <option name="y" value="44" />
-    <option name="width" value="1283" />
-    <option name="height" value="704" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1612" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -272,22 +289,19 @@
             </path>
             <path>
               <item name="trafic_simulator" type="b2602c69:ProjectViewProjectNode" />
-              <item name="trafic_simulator" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543241200961" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544445178424" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -362,18 +376,22 @@
       <workItem from="1543479956477" duration="6771000" />
       <workItem from="1543501613228" duration="243000" />
       <workItem from="1543515840040" duration="1169000" />
-      <workItem from="1543517030724" duration="977000" />
+      <workItem from="1543517030724" duration="5218000" />
+      <workItem from="1543826456559" duration="2620000" />
+      <workItem from="1544192442484" duration="627000" />
+      <workItem from="1544263230174" duration="1827000" />
+      <workItem from="1544430273103" duration="9626000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97380000" />
+    <option name="totallyTimeSpent" value="116321000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="-11" width="1305" height="780" extended-state="6" />
+    <frame x="63" y="-4" width="1303" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2195704" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20206842" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -383,7 +401,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919255" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23136646" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.0931677" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4409938" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -392,7 +410,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32919255" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.09006211" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.09006211" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -421,10 +439,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
           <caret line="210" column="24" selection-start-line="210" selection-start-column="24" selection-end-line="210" selection-end-column="24" />
-          <folding>
-            <element signature="e#5507#5508#0" expanded="true" />
-            <element signature="e#5555#5556#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -457,38 +471,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
-            <element signature="e#344#345#0" expanded="true" />
-            <element signature="e#378#379#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="502">
+          <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#788#789#0" expanded="true" />
-            <element signature="e#827#828#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="35" selection-end-line="22" selection-end-column="37" />
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -499,27 +502,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/Light.java">
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/CrossroadGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/CarGeneratorField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="45" column="14" selection-start-line="45" selection-start-column="14" selection-end-line="45" selection-end-column="14" />
+        <state relative-caret-position="-150">
+          <caret line="2" column="7" lean-forward="true" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -528,18 +514,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ourPackage/Car.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1402">
-          <caret line="187" column="13" selection-start-line="187" selection-start-column="13" selection-end-line="187" selection-end-column="13" />
+        <state relative-caret-position="-1545">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#6541#6542#0" expanded="true" />
-            <element signature="e#6580#6581#0" expanded="true" />
-            <element signature="e#6615#6616#0" expanded="true" />
-            <element signature="e#6649#6650#0" expanded="true" />
-            <element signature="e#6700#6701#0" expanded="true" />
-            <element signature="e#6746#6747#0" expanded="true" />
-            <element signature="e#6790#6791#0" expanded="true" />
-            <element signature="e#6830#6831#0" expanded="true" />
+            <element signature="e#6803#6804#0" expanded="true" />
+            <element signature="e#6843#6844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/RoadGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="71" column="46" selection-start-line="71" selection-start-column="33" selection-end-line="71" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+            <element signature="e#767#768#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/Simulation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="40" column="42" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+            <element signature="e#827#828#0" expanded="true" />
+            <element signature="e#1285#1286#0" expanded="true" />
+            <element signature="e#1312#1313#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ourPackage/SimLoop.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="59" column="9" lean-forward="true" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#297#298#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
           </folding>
         </state>
       </provider>
