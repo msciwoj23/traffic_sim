@@ -20,8 +20,16 @@ public class Simulation extends Pane {
 
     public static List<Light> stopLights = new LinkedList<>();
 
-    private List<NormalRoad> allRoads = new ArrayList<>();
-    private List<Crossroad> allCrossroads = new ArrayList<>();
+    public List<NormalRoad> getAllRoads() {
+        return allRoads;
+    }
+
+    public List<Crossroad> getAllCrossroads() {
+        return allCrossroads;
+    }
+
+    protected List<NormalRoad> allRoads = new ArrayList<>();
+    protected List<Crossroad> allCrossroads = new ArrayList<>();
 
     public static List<CarGeneratorField> allCarGenerators= new ArrayList<>();
 
@@ -38,7 +46,7 @@ public class Simulation extends Pane {
         RoadGenerator road=new RoadGenerator();
         road.generate(0,1000,100, false, this,allRoads);
         road.generate(0,1000,300, true, this,allRoads);
-        road.generate(0,300,300, false, this,allRoads);
+        road.generate(0,400,300, false, this,allRoads);
         road.generate(0,1000,500, true, this,allRoads);
 //        System.out.println("to tu");
         for (CarGeneratorField generator:allCarGenerators){
@@ -49,7 +57,6 @@ public class Simulation extends Pane {
         crossroads.checkAndGenerate(allRoads, allCrossroads, this);
         RoadsPrinter printroads=new RoadsPrinter();
         printroads.printRoads(allRoads,allCrossroads,this);
-        System.out.println(allCrossroads.size());
 
     }
 

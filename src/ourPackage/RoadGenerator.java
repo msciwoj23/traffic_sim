@@ -37,16 +37,15 @@ public class RoadGenerator {
     private int size=100;
 
     private void generateVerticalRoad(int start, int stop, int secondParameter, Pane pane, List<NormalRoad> allRoads){
-        for (int i=Math.round(start/size);i<Math.round(stop/size)+1;i++){
+        for (int i=Math.round(start/size);i<Math.round(stop/size);i++){
             NormalRoad road= new NormalRoad(secondParameter,i*size, size);
             allRoads.add(road);
-            System.out.println();
             if (i*size==0){
                 CarGeneratorField carGenerator = new CarGeneratorField(secondParameter,-size,Direction.S,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
-            if (i*size==Main.getBoardheight()){
-                CarGeneratorField carGenerator = new CarGeneratorField(secondParameter, Main.getBoardheight(),Direction.N,pane);
+            if (i*size==Main.getBoardHight()-size){
+                CarGeneratorField carGenerator = new CarGeneratorField(secondParameter, Main.getBoardHight(),Direction.N,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
         }
@@ -54,15 +53,15 @@ public class RoadGenerator {
     }
 
     private void generateHorizontalRoad(int start, int stop, int secondParameter, Pane pane, List<NormalRoad> allRoads){
-        for (int i=Math.round(start/size);i<Math.round(stop/size)+1;i++){
+        for (int i=Math.round(start/size);i<Math.round(stop/size);i++){
             NormalRoad road= new NormalRoad(i*size, secondParameter, size);
             allRoads.add(road);
             if (Math.round(i*size)==0){
                 CarGeneratorField carGenerator = new CarGeneratorField(-size,secondParameter,Direction.E,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
-            if (i*size==Main.getBoardwidth()){
-                CarGeneratorField carGenerator = new CarGeneratorField(Main.getBoardwidth(), secondParameter,Direction.W,pane);
+            if (i*size==Main.getBoardWidth()-size){
+                CarGeneratorField carGenerator = new CarGeneratorField(Main.getBoardWidth(), secondParameter,Direction.W,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
         }

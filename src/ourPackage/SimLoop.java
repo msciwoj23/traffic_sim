@@ -46,8 +46,8 @@ public class SimLoop extends AnimationTimer {
 
     private void removingCarsIfOutOfWindow() {
         final int UP_AND_LEFTMOST_PIXEL = -200;
-        final int LOWEST_PIXEL = Main.getBoardheight() + 100;
-        final int RIGHTMOST_PIXEL = Main.getBoardwidth() + 100;
+        final int LOWEST_PIXEL = Main.getBoardHight() + 100;
+        final int RIGHTMOST_PIXEL = Main.getBoardWidth() + 100;
 
         for (Car car : Simulation.cars) {
             car.continueAppropriateMovement();

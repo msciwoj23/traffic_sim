@@ -17,9 +17,7 @@ public class RoadsPrinter {
         for (Crossroad crossroad:allCrossroads) {
             Rectangle roadRepresentation = new Rectangle(crossroad.getWidth(), crossroad.getHeight(), Color.DARKGRAY);
             roadRepresentation.relocate(crossroad.getPositionX(), crossroad.getPositionY());
-
             pane.getChildren().add(roadRepresentation);
         }
-
     }
 }
