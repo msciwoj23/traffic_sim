@@ -45,25 +45,25 @@ public class CarGeneratorField {
     public void printField(){}
 
     public void timer(){timer--;}
-    public void carFromN(){
+    public void carToN(){
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateRight);
         car.setY(positionY + translateDown);
         car.toFront();
     }
-    public void carFromS(){
+    public void carToS(){
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateLeft);
         car.setY(positionY + translateUp);
         car.toFront();
     }
-    public void carFromE(){
+    public void carToE(){
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateLeft);
         car.setY(positionY + translateDown);
         car.toFront();
     }
-    public void carFromW(){
+    public void carToW(){
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateRight);
         car.setY(positionY + translateUp);
@@ -74,10 +74,10 @@ public class CarGeneratorField {
 
 
          if (timer<0){
-             if (direction == Direction.N) {carFromN();}
-             if (direction == Direction.S) {carFromS();}
-             if (direction == Direction.E) {carFromE();}
-             if (direction == Direction.W) {carFromW();}
+             if (direction == Direction.N) {carToN();}
+             if (direction == Direction.S) {carToS();}
+             if (direction == Direction.E) {carToE();}
+             if (direction == Direction.W) {carToW();}
 
              timer = Math.random()*nextCarTimeWindowInSeconds * framesPerSecond  + nextCarMinimumTimeInSeconds * framesPerSecond;
             }

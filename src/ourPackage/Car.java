@@ -20,6 +20,10 @@ class Car extends Rectangle {
     private int timeToWait = 0;
     private int goStraightTime = 0;
 
+    public int getCurrentDirection() {
+        return currentDirection;
+    }
+
     private int currentDirection;
     private int directionWanted;
 

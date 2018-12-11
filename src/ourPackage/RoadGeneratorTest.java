@@ -73,9 +73,17 @@ public class RoadGeneratorTest extends Pane {
 
         road.generate(start, stop, secondParameter, vertical1,pane, simulation.allRoads);
         road.generate(start, stop, secondParameter, vertical2,pane, simulation.allRoads);
+        CrossroadGenerator crossroads= new CrossroadGenerator();
+        crossroads.checkAndGenerate(simulation.allRoads, simulation.allCrossroads, pane);
 
-        System.out.println("Number of crossroad");
+
+        System.out.println("Number of crossroads");
         assertEquals(1, simulation.getAllCrossroads().size());
+        System.out.println("Correct");
+
+        System.out.println("Position of crossroad");
+        assertEquals(secondParameter, simulation.getAllCrossroads().get(0).getPositionX());
+        assertEquals(secondParameter, simulation.getAllCrossroads().get(0).getPositionY());
         System.out.println("Correct");
 
 
