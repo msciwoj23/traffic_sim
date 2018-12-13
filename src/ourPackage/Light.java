@@ -1,8 +1,13 @@
 package ourPackage;
 
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class Light extends Circle {
 
@@ -17,9 +22,13 @@ public class Light extends Circle {
     private int timeForRed = 1000;
     private int timeForYellowAftRed = 1700;
 
+    Image red = new Image(new FileInputStream("resources/red.png"));
+    Image yellow = new Image(new FileInputStream("resources/yellow.png"));
+    Image green = new Image(new FileInputStream("resources/green.png"));
 
-    Light (Pane pane, int xc, int yc, int timer) {
-        super(xc,yc,12, Color.GREEN);
+
+    Light (Pane pane, int xc, int yc, int timer, int radius) throws FileNotFoundException {
+        super(xc,yc,radius, Color.GREEN);
 
         this.timer = timer;
         this.pane = pane;
@@ -27,23 +36,24 @@ public class Light extends Circle {
         Simulation.lights.add(this);
         Simulation.stopLights.add(this);
         pane.getChildren().add(this);
+        this.setFill(new ImagePattern(green));
     }
 
     public void senseTimePassingAndChange () {
 
         if (timer == timeForYellowAftGreen) {
-            this.setFill(Color.YELLOW);
+            this.setFill(new ImagePattern(yellow));
         } else if (timer == timeForRed) {
-            this.setFill(Color.RED);
+            this.setFill(new ImagePattern(red));
         } else if (timer == timeForYellowAftRed) {
-            this.setFill(Color.YELLOW);
+            this.setFill(new ImagePattern(yellow));
         } else if (timer == 2001){
             timer = 0;
-            this.setFill(Color.GREEN);
+            this.setFill(new ImagePattern(green));
         }
 
         timer++;
-        if (this.getFill() == Color.GREEN) {
+        if (this.getFill() == new ImagePattern(green)) {
             timeToNextGreen = 1;
         } else {
             timeToNextGreen = 2001 - timer;

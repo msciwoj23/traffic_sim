@@ -2,6 +2,8 @@ package ourPackage;
 
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
+
 import static org.junit.Assert.*;
 
 
@@ -12,7 +14,7 @@ public class CrossroadTest extends Roads {
 
 
     @Test
-    public void crossroadConstructor(){
+    public void crossroadConstructor() throws FileNotFoundException {
         int posX = 10;
         int posY = 10;
         int roadsize = 100;

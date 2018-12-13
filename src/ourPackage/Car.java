@@ -2,10 +2,16 @@ package ourPackage;
 
 import javafx.geometry.Bounds;
 import javafx.geometry.Point2D;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
+
+import javax.imageio.ImageIO;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 class Car extends Rectangle {
 
@@ -30,7 +36,7 @@ class Car extends Rectangle {
     private WhereTo whereTo = WhereTo.TO_NEXT_LIGHTS;
     private Circle collisionDetector;
 
-    Car(Pane pane, int xc, int yc, int dir) {
+    Car(Pane pane, int xc, int yc, int dir) throws FileNotFoundException {
         super(xc,yc, Color.GREEN);
         int COLLISION_CIRCLE_RADIUS = 14;
 
@@ -42,8 +48,13 @@ class Car extends Rectangle {
                 getY(),
                 COLLISION_CIRCLE_RADIUS,
                 Color.LIGHTYELLOW);
+                Image image0 = new Image(new FileInputStream("resources/lights2.png"));
+                collisionCircle.setFill(new ImagePattern(image0));
 
         this.collisionDetector = collisionCircle;
+        int random=(int)(Math.random()*10);
+        Image image1 = new Image(new FileInputStream("resources/car"+random+".png"));
+        this.setFill(new ImagePattern(image1));
 
         pane.getChildren().addAll(this, collisionCircle);
         collisionCircle.toFront();
@@ -63,6 +74,7 @@ class Car extends Rectangle {
         Bounds carBounds = this.getBoundsInParent();
         double carCenterY = (carBounds.getMinY() + carBounds.getMaxY())/2;
         double carCenterX = (carBounds.getMinX() + carBounds.getMaxX())/2;
+        collisionDetector.setRotate(directionInDegrees);
 
         Point2D collisionLightHeading = Utils.directionToVector(directionInDegrees,
                 REGULAR_SPEED + COLLISION_LIGHT_DISTANCE);

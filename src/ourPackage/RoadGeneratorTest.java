@@ -3,6 +3,7 @@ package ourPackage;
 import javafx.scene.layout.Pane;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import static org.junit.Assert.*;
 public class RoadGeneratorTest extends Pane {
 
     @Test
-    public void generate() {
+    public void generate() throws FileNotFoundException {
         Simulation simulation= new Simulation();
         simulation.getAllRoads().clear();
         simulation.getAllCrossroads().clear();

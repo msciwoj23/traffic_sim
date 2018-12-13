@@ -4,6 +4,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public class RoadGenerator {
@@ -36,9 +37,9 @@ public class RoadGenerator {
     private boolean vertical;
     private int size=100;
 
-    private void generateVerticalRoad(int start, int stop, int secondParameter, Pane pane, List<NormalRoad> allRoads){
+    private void generateVerticalRoad(int start, int stop, int secondParameter, Pane pane, List<NormalRoad> allRoads,boolean vertical) throws FileNotFoundException {
         for (int i=Math.round(start/size);i<Math.round(stop/size);i++){
-            NormalRoad road= new NormalRoad(secondParameter,i*size, size);
+            NormalRoad road= new NormalRoad(secondParameter,i*size, size,vertical);
             allRoads.add(road);
             if (i*size==0){
                 CarGeneratorField carGenerator = new CarGeneratorField(secondParameter,-size,Direction.S,pane);
@@ -52,9 +53,9 @@ public class RoadGenerator {
 
     }
 
-    private void generateHorizontalRoad(int start, int stop, int secondParameter, Pane pane, List<NormalRoad> allRoads){
+    private void generateHorizontalRoad(int start, int stop, int secondParameter, Pane pane, List<NormalRoad> allRoads,boolean vertical) throws FileNotFoundException {
         for (int i=Math.round(start/size);i<Math.round(stop/size);i++){
-            NormalRoad road= new NormalRoad(i*size, secondParameter, size);
+            NormalRoad road= new NormalRoad(i*size, secondParameter, size,vertical);
             allRoads.add(road);
             if (Math.round(i*size)==0){
                 CarGeneratorField carGenerator = new CarGeneratorField(-size,secondParameter,Direction.E,pane);
@@ -67,9 +68,9 @@ public class RoadGenerator {
         }
     }
 
-    public void generate(int start, int stop, int secondParameter, boolean vertical, Pane pane, List<NormalRoad> allRoads) {
+    public void generate(int start, int stop, int secondParameter, boolean vertical, Pane pane, List<NormalRoad> allRoads) throws FileNotFoundException {
 
-        if (vertical){ generateVerticalRoad(start, stop, secondParameter,pane,allRoads);
-        }else{generateHorizontalRoad(start, stop, secondParameter,pane,allRoads);}
+        if (vertical){ generateVerticalRoad(start, stop, secondParameter,pane,allRoads,true);
+        }else{generateHorizontalRoad(start, stop, secondParameter,pane,allRoads,false);}
     }
 }

@@ -2,6 +2,8 @@ package ourPackage;
 
 import javafx.scene.layout.Pane;
 
+import java.io.FileNotFoundException;
+
 public class CarGeneratorField {
 
 
@@ -45,32 +47,32 @@ public class CarGeneratorField {
     public void printField(){}
 
     public void timer(){timer--;}
-    public void carToN(){
+    public void carToN() throws FileNotFoundException {
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateRight);
         car.setY(positionY + translateDown);
         car.toFront();
     }
-    public void carToS(){
+    public void carToS() throws FileNotFoundException {
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateLeft);
         car.setY(positionY + translateUp);
         car.toFront();
     }
-    public void carToE(){
+    public void carToE() throws FileNotFoundException {
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateLeft);
         car.setY(positionY + translateDown);
         car.toFront();
     }
-    public void carToW(){
+    public void carToW() throws FileNotFoundException {
         Car car = new Car(pane, carWidth, carLength, direction.getDirection());
         car.setX(positionX + translateRight);
         car.setY(positionY + translateUp);
         car.toFront();
     }
 
-    public void tryToGenerateCar(){
+    public void tryToGenerateCar() throws FileNotFoundException {
 
 
          if (timer<0){

@@ -3,13 +3,15 @@ package ourPackage;
 import javafx.scene.layout.Pane;
 import org.junit.Test;
 
+import java.io.FileNotFoundException;
+
 import static org.junit.Assert.*;
 
 public class CarGeneratorFieldTest extends Pane {
 
 
     @Test
-    public void carToN() {
+    public void carToN() throws FileNotFoundException {
         Simulation simulation= new Simulation();
         simulation.cars.clear();
         int positionX=100;
@@ -30,7 +32,7 @@ public class CarGeneratorFieldTest extends Pane {
     }
 
     @Test
-    public void carToS() {
+    public void carToS() throws FileNotFoundException {
         Simulation simulation= new Simulation();
         simulation.cars.clear();
         int positionX=100;
@@ -50,7 +52,7 @@ public class CarGeneratorFieldTest extends Pane {
     }
 
     @Test
-    public void carToE() {
+    public void carToE() throws FileNotFoundException {
         Simulation simulation= new Simulation();
         simulation.cars.clear();
         int positionX=100;
@@ -69,7 +71,7 @@ public class CarGeneratorFieldTest extends Pane {
     }
 
     @Test
-    public void carToW() {
+    public void carToW() throws FileNotFoundException {
         Simulation simulation= new Simulation();
         simulation.cars.clear();
         int positionX=100;
@@ -86,7 +88,7 @@ public class CarGeneratorFieldTest extends Pane {
         System.out.println("Correct");
     }
     @Test
-    public void tryToGenerateCar() {
+    public void tryToGenerateCar() throws FileNotFoundException {
         Simulation simulation= new Simulation();
         simulation.cars.clear();
         int positionX=100;

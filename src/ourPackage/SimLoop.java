@@ -1,6 +1,8 @@
 package ourPackage;
 
 import javafx.animation.AnimationTimer;
+
+import java.io.FileNotFoundException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,7 +17,11 @@ public class SimLoop extends AnimationTimer {
         removingCarsFromList();
         toRemoveList.clear();
         timerGeneratroForCars();
-        carsGenerator();
+        try {
+            carsGenerator();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     private void changeLightAndTime() {
@@ -37,7 +43,7 @@ public class SimLoop extends AnimationTimer {
         }
     }
 
-    private void carsGenerator() {
+    private void carsGenerator() throws FileNotFoundException {
         if (Simulation.cars.size() < 12) {
             int dice = (int) (Math.random() * Simulation.getAllCarGenerators().size());
             Simulation.getAllCarGenerators().get(dice).tryToGenerateCar();
