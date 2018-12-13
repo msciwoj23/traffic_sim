@@ -11,18 +11,11 @@ public class SimLoop extends AnimationTimer {
     @Override
     public void handle(long now) {
         removingCarsIfOutOfWindow();
-//        changeLightAndTime();
         removingCarsFromList();
         toRemoveList.clear();
         timerGeneratroForCars();
         carsGenerator();
     }
-
-//    private void changeLightAndTime() {
-//        for (Light light : Simulation.lights) {
-//            light.senseTimePassingAndChange();
-//        }
-//    }
 
     private void removingCarsFromList() {
         for (Car car : toRemoveList) {

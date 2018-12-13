@@ -10,7 +10,7 @@ public class LightsThread {
         while (true) {
             changeLightAndTime();
             try {
-            Thread.sleep(10);
+            Thread.sleep(7);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
