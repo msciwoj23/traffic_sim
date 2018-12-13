@@ -4,12 +4,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-class Light extends Circle {
+public class Light extends Circle {
 
-    private int timer;
-    private int timeToNextGreen;
+    private int timer,
+                timeToNextGreen;
 
-    Light (Pane pane, int xc, int yc, int timer) {
+    public Light(Pane pane, int xc, int yc, int timer) {
         super(xc,yc,12, Color.GREEN);
 
         this.timer = timer;

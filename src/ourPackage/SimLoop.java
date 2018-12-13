@@ -46,8 +46,8 @@ public class SimLoop extends AnimationTimer {
 
     private void removingCarsIfOutOfWindow() {
         final int UP_AND_LEFTMOST_PIXEL = -200;
-        final int LOWEST_PIXEL = Main.getBoardheight() + 100;
-        final int RIGHTMOST_PIXEL = Main.getBoardwidth() + 100;
+        final int LOWEST_PIXEL = Main.getBoardHeight() + 100;
+        final int RIGHTMOST_PIXEL = Main.getBoardWidth() + 100;
 
         for (Car car : Simulation.cars) {
             car.continueAppropriateMovement();
@@ -59,7 +59,6 @@ public class SimLoop extends AnimationTimer {
                 toRemoveList.add(car);
             } else if (car.getLayoutBounds().getMinX() >= RIGHTMOST_PIXEL) {
                 toRemoveList.add(car);
-                System.out.println(toRemoveList.size());
             }
         }
     }

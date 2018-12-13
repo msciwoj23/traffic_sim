@@ -1,8 +1,6 @@
 package ourPackage;
 
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 import java.util.List;
 
@@ -45,8 +43,8 @@ public class RoadGenerator {
                 CarGeneratorField carGenerator = new CarGeneratorField(secondParameter,-size,Direction.S,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
-            if (i*size==Main.getBoardheight()){
-                CarGeneratorField carGenerator = new CarGeneratorField(secondParameter, Main.getBoardheight(),Direction.N,pane);
+            if (i*size==Main.getBoardHeight()){
+                CarGeneratorField carGenerator = new CarGeneratorField(secondParameter, Main.getBoardHeight(),Direction.N,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
         }
@@ -61,8 +59,8 @@ public class RoadGenerator {
                 CarGeneratorField carGenerator = new CarGeneratorField(-size,secondParameter,Direction.E,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
-            if (i*size==Main.getBoardwidth()){
-                CarGeneratorField carGenerator = new CarGeneratorField(Main.getBoardwidth(), secondParameter,Direction.W,pane);
+            if (i*size==Main.getBoardWidth()){
+                CarGeneratorField carGenerator = new CarGeneratorField(Main.getBoardWidth(), secondParameter,Direction.W,pane);
                 Simulation.allCarGenerators.add(carGenerator);
             }
         }

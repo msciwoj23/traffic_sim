@@ -1,11 +1,6 @@
 package ourPackage;
 
-import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Shape;
-import javafx.scene.shape.Rectangle;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -40,16 +35,11 @@ public class Simulation extends Pane {
         road.generate(0,1000,300, true, this,allRoads);
         road.generate(0,300,300, false, this,allRoads);
         road.generate(0,1000,500, true, this,allRoads);
-//        System.out.println("to tu");
-        for (CarGeneratorField generator:allCarGenerators){
-//            System.out.println(generator.getPositionX()+" "+generator.getPositionY()+" "+generator.getDirection());
-        }
-//        System.out.println(allCarGenerators.size());
+
         CrossroadGenerator crossroads= new CrossroadGenerator();
         crossroads.checkAndGenerate(allRoads, allCrossroads, this);
         RoadsPrinter printroads=new RoadsPrinter();
         printroads.printRoads(allRoads,allCrossroads,this);
-        System.out.println(allCrossroads.size());
 
     }
 

@@ -4,6 +4,8 @@ import javafx.geometry.Point2D;
 
 public class Utils {
 
+    public enum WhereTo { THROUGH_CROSSROADS, LEFT, RIGHT, TO_NEXT_LIGHTS }
+
     /*
     Converts a direction in degrees (0...360) to x and y coordinates.
     The length of this vector is the second parameter
