@@ -11,23 +11,23 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static int getBoardwidth() {
-        return boardwidth;
+    public static int getBoardWidth() {
+        return boardWidth;
     }
 
-    public static int getBoardheight() {
-        return boardheight;
+    public static int getBoardHight() {
+        return boardHight;
     }
 
-    private static int boardwidth= 1000;
-    private static int boardheight= 600;
+    private static int boardWidth= 1000;
+    private static int boardHight= 600;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
 
         Simulation simulation = new Simulation();
         primaryStage.setTitle("CitSimmy");
-        primaryStage.setScene(new Scene(simulation, boardwidth, boardheight));
+        primaryStage.setScene(new Scene(simulation, boardWidth, boardHight));
         primaryStage.show();
         simulation.start();
     }

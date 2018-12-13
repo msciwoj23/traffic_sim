@@ -1,22 +1,41 @@
 package ourPackage;
 
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
-class Light extends Circle {
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Light extends Circle {
+
+    protected Pane pane;
+
 
     private int timer;
     private int timeToNextGreen;
+    private int timeForGreen = 0;
+    private int timeForYellowAftGreen = 700;
+    private int timeForRed = 1000;
+    private int timeForYellowAftRed = 1700;
 
-    Light (Pane pane, int xc, int yc, int timer) {
-        super(xc,yc,12, Color.GREEN);
+    Image red = new Image(new FileInputStream("resources/red.png"));
+    Image yellow = new Image(new FileInputStream("resources/yellow.png"));
+    Image green = new Image(new FileInputStream("resources/green.png"));
+
+
+    Light (Pane pane, int xc, int yc, int timer, int radius) throws FileNotFoundException {
+        super(xc,yc,radius, Color.GREEN);
 
         this.timer = timer;
 
         Simulation.lights.add(this);
         Simulation.stopLights.add(this);
         pane.getChildren().add(this);
+        this.setFill(new ImagePattern(green));
     }
 
     void senseTimePassingAndChange () {
@@ -29,21 +48,17 @@ class Light extends Circle {
         final int NOW = 0;
 
         if (timer == TIME_FOR_YELLOW_AFT_GREEN) {
-            this.setFill(Color.YELLOW);
+            this.setFill(new ImagePattern(yellow));
         } else if (timer == TIME_FOR_RED) {
-            this.setFill(Color.RED);
+            this.setFill(new ImagePattern(red));
         } else if (timer == TIME_FOR_YELLOW_AFT_RED) {
-            this.setFill(Color.YELLOW);
-        } else if (timer == CYCLES_END){
-            timer = 0;
-            this.setFill(Color.GREEN);
-        }
-        timer++;
-
-        if (this.getFill() == Color.GREEN) {
-            timeToNextGreen = NOW;
-        } else {
-            timeToNextGreen = CYCLES_END - timer;
+            this.setFill(new ImagePattern(yellow));
+        } else if (timer == CYCLES_END) {
+            if (this.getFill() == new ImagePattern(green)) {
+                timeToNextGreen = 1;
+            } else {
+                timeToNextGreen = CYCLES_END - timer;
+            }
         }
     }
 

@@ -1,12 +1,15 @@
 package ourPackage;
 
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
+import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Shape;
 import javafx.scene.shape.Rectangle;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,8 +23,16 @@ public class Simulation extends Pane {
 
     public static List<Light> stopLights = new LinkedList<>();
 
-    private List<NormalRoad> allRoads = new ArrayList<>();
-    private List<Crossroad> allCrossroads = new ArrayList<>();
+    public List<NormalRoad> getAllRoads() {
+        return allRoads;
+    }
+
+    public List<Crossroad> getAllCrossroads() {
+        return allCrossroads;
+    }
+
+    protected List<NormalRoad> allRoads = new ArrayList<>();
+    protected List<Crossroad> allCrossroads = new ArrayList<>();
 
     public static List<CarGeneratorField> allCarGenerators= new ArrayList<>();
 
@@ -33,12 +44,18 @@ public class Simulation extends Pane {
         Simulation.allCarGenerators = allCarGenerators;
     }
 
-    public Simulation() {
+    public Simulation() throws FileNotFoundException {
+        Image image = new Image(new FileInputStream("resources/grass.png"));
+
+        BackgroundImage myBI= new BackgroundImage(new Image(new FileInputStream("resources/grass.png")),
+                BackgroundRepeat.REPEAT, BackgroundRepeat.REPEAT, BackgroundPosition.DEFAULT,
+                BackgroundSize.DEFAULT);
+        this.setBackground(new Background(myBI));
 
         RoadGenerator road=new RoadGenerator();
         road.generate(0,1000,100, false, this,allRoads);
         road.generate(0,1000,300, true, this,allRoads);
-        road.generate(0,300,300, false, this,allRoads);
+        road.generate(0,1000,300, false, this,allRoads);
         road.generate(0,1000,500, true, this,allRoads);
 //        System.out.println("to tu");
         for (CarGeneratorField generator:allCarGenerators){
@@ -49,11 +66,11 @@ public class Simulation extends Pane {
         crossroads.checkAndGenerate(allRoads, allCrossroads, this);
         RoadsPrinter printroads=new RoadsPrinter();
         printroads.printRoads(allRoads,allCrossroads,this);
-        System.out.println(allCrossroads.size());
 
     }
 
     public void start() {
+
 
         SimLoop simLoop = new SimLoop();
         simLoop.start();
