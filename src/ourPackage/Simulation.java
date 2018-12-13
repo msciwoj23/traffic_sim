@@ -47,5 +47,8 @@ public class Simulation extends Pane {
 
         SimLoop simLoop = new SimLoop();
         simLoop.start();
+
+        LightsThread lightsThread = new LightsThread();
+        lightsThread.run();
     }
 }
