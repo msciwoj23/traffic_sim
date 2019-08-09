@@ -15,3 +15,7 @@ The project was created during my training in Codecool.
 ## Used technology
 * Java SE
 * JavaFx
+
+
+## How it looks
+![alt text](https://github.com/msciwoj23/traffic_sim/blob/master/traffic_cropped.png)
