@@ -18,4 +18,4 @@ The project was created during my training in Codecool.
 
 
 ## How it looks
-![alt text](https://github.com/msciwoj23/traffic_sim/blob/master/traffic_cropped.png)
+![sorry, there was supposed to be photo in here :(](https://github.com/msciwoj23/traffic_sim/blob/master/traffic_cropped.png)
